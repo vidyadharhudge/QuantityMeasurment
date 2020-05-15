@@ -85,6 +85,14 @@ public class QuantityMeasurmentTest
         Assert.assertFalse(qunatityMeasurment.equals(obj));
     }
 
+    @Test
+    public void givenTwoEqualInchValue_WhenEqual_ThenShouldReturnTrue()
+    {
+        double value1=qunatityMeasurment.getFeet(1.0);
+        double value2=qunatityMeasurment.getFeet(1.0);
+        Assert.assertEquals(value1,value2,0.0);
+    }
+
 
 
 
