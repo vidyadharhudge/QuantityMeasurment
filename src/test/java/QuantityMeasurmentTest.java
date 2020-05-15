@@ -61,8 +61,8 @@ public class QuantityMeasurmentTest
     @Test
     public void givenZeroInchAndZeroInchValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.unitConversion(Units.Inch,0.0);
-        double value2=qunatityMeasurment.unitConversion(Units.Inch,0.0);
+        double value1=qunatityMeasurment.unitConversion(Units.INCH,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.INCH,0.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
@@ -89,16 +89,25 @@ public class QuantityMeasurmentTest
     @Test
     public void givenTwoEqualInchValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.unitConversion(Units.Inch,1.0);
-        double value2=qunatityMeasurment.unitConversion(Units.Inch,1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.INCH,1.0);
+        double value2=qunatityMeasurment.unitConversion(Units.INCH,1.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
     @Test
     public void givenTwoDiffrentInchValue_WhenEqual_ThenShouldReturnFalse()
     {
-        double value1=qunatityMeasurment.unitConversion(Units.Inch,0.0);
-        double value2=qunatityMeasurment.unitConversion(Units.Inch,1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.INCH,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.INCH,1.0);
         Assert.assertNotEquals(value1,value2,0.0);
     }
+
+    @Test
+    public void givenZeroFeetAndZeroInchValue_WhenEqual_ThenShouldReturnTrue()
+    {
+        double value1=qunatityMeasurment.unitConversion(Units.FEET,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.INCH,0.0);
+        Assert.assertEquals(value1,value2,0.0);
+    }
+
 }
