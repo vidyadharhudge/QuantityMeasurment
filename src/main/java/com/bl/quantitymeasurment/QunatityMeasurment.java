@@ -1,27 +1,18 @@
 package com.bl.quantitymeasurment;
 
-import java.util.Objects;
-
 public class QunatityMeasurment
 {
-    private double feet;
-    private double Inch;
-
-    public double getFeet(double feet)
+    public double unitConversion(Units units, double value)
     {
-        return feet;
+        return value*units.unit;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        QunatityMeasurment that = (QunatityMeasurment) o;
-        return Double.compare(that.feet, feet) == 0;
-    }
-
-    public double getInch(double Inch )
+    public boolean equals(Object obj)
     {
-        return Inch;
+        if (obj==null) return false;
+        if (this==obj)return true;
+        if (this.getClass()==obj.getClass())return true;
+        return super.equals(obj);
     }
 }

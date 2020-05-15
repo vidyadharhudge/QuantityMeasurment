@@ -1,4 +1,5 @@
 import com.bl.quantitymeasurment.QunatityMeasurment;
+import com.bl.quantitymeasurment.Units;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,8 +17,8 @@ public class QuantityMeasurmentTest
     @Test
     public void givenZeroFeetAndZeroFeetValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.getFeet(0.0);
-        double value2=qunatityMeasurment.getFeet(0.0);
+        double value1=qunatityMeasurment.unitConversion(Units.FEET,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.FEET,0.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
@@ -44,24 +45,24 @@ public class QuantityMeasurmentTest
     @Test
     public void givenTwoDiffrentFeetValue_WhenEqual_ThenShouldReturnFalse()
     {
-        double value1=qunatityMeasurment.getFeet(0.0);
-        double value2=qunatityMeasurment.getFeet(1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.FEET,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.FEET,1.0);
         Assert.assertNotEquals(value1,value2,0.0);
     }
 
     @Test
     public void givenTwoEqualFeetValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.getFeet(1.0);
-        double value2=qunatityMeasurment.getFeet(1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double value2=qunatityMeasurment.unitConversion(Units.FEET,1.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
     @Test
     public void givenZeroInchAndZeroInchValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.getInch(0.0);
-        double value2=qunatityMeasurment.getInch(0.0);
+        double value1=qunatityMeasurment.unitConversion(Units.Inch,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.Inch,0.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
@@ -88,22 +89,16 @@ public class QuantityMeasurmentTest
     @Test
     public void givenTwoEqualInchValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.getFeet(1.0);
-        double value2=qunatityMeasurment.getFeet(1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.Inch,1.0);
+        double value2=qunatityMeasurment.unitConversion(Units.Inch,1.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
     @Test
     public void givenTwoDiffrentInchValue_WhenEqual_ThenShouldReturnFalse()
     {
-        double value1=qunatityMeasurment.getFeet(0.0);
-        double value2=qunatityMeasurment.getFeet(1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.Inch,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.Inch,1.0);
         Assert.assertNotEquals(value1,value2,0.0);
     }
-
-
-
-
-
-
 }
