@@ -119,10 +119,17 @@ public class QuantityMeasurmentTest
     }
 
     @Test
-    public void givenOneFeetAndTweleveInchValue_ThenShouldReturnTrue()
+    public void givenOneFeetAndTweleveInchValue_WhenEqual_ThenShouldReturnTrue()
     {
         double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
         Assert.assertEquals(12,feetValue,0.0);
+    }
+
+    @Test
+    public void givenTweleveInchAndOneFeetValue_WhenEqual_ThenShouldReturnTrue()
+    {
+        double inchValue=qunatityMeasurment.unitConversion(Units.INCH,12.0);
+        Assert.assertEquals(1,inchValue,0.0);
     }
 
 
