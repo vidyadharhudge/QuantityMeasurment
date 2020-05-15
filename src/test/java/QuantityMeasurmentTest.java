@@ -35,7 +35,7 @@ public class QuantityMeasurmentTest
     }
 
     @Test
-    public void givenDiffrentTypeObject_WhenEqual_ThenShouldReturnFalse()
+    public void givenDiffrentTypeCheckObject_WhenEqual_ThenShouldReturnFalse()
     {
         Object obj=new Object();
         Assert.assertFalse(qunatityMeasurment.equals(obj));
@@ -76,6 +76,13 @@ public class QuantityMeasurmentTest
     {
         QunatityMeasurment qunatityMeasurment1=new QunatityMeasurment();
         Assert.assertEquals(qunatityMeasurment,qunatityMeasurment1);
+    }
+
+    @Test
+    public void givenDiffrentTypeCheckObjectInch_WhenEqual_ThenShouldReturnFalse()
+    {
+        Object obj=new Object();
+        Assert.assertFalse(qunatityMeasurment.equals(obj));
     }
 
 
