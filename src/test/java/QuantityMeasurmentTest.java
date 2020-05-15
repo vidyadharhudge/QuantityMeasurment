@@ -179,7 +179,4 @@ public class QuantityMeasurmentTest
         double feetValue=qunatityMeasurment.unitConversion(Units.FEET,3.0);
         Assert.assertEquals(yardValue,feetValue,0.0);
     }
-
-
-
 }
