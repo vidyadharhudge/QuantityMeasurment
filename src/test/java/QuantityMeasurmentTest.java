@@ -103,11 +103,20 @@ public class QuantityMeasurmentTest
     }
 
     @Test
-    public void givenZeroFeetAndZeroInchValue_WhenEqual_ThenShouldReturnTrue()
+    public void givenOneFeetAndOneInchValue_WhenNotEqual_ThenShouldReturnTrue()
     {
         double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
         Assert.assertNotEquals(feetValue,inchValue,0.0);
     }
+    @Test
+    public void givenOneInchAndOneFeetValue_WhenNotEqual_ThenShouldReturnTrue()
+    {
+        double feetValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
+        double inchValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        Assert.assertNotEquals(feetValue,inchValue,0.0);
+    }
+
+
 
 }
