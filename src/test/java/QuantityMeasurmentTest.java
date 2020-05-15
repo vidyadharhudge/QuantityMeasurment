@@ -35,11 +35,28 @@ public class QuantityMeasurmentTest
     }
 
     @Test
-    public void givenRefrenceObject_WhenEqual_ThenShouldReturnTrues()
+    public void givenDiffrentTypeObject_WhenEqual_ThenShouldReturnFalse()
     {
         Object obj=new Object();
         Assert.assertFalse(qunatityMeasurment.equals(obj));
     }
+
+    @Test
+    public void givenTwoDiffrentFeetValue_WhenEqual_ThenShouldReturnFalse()
+    {
+        double value1=qunatityMeasurment.getFeet(0.0);
+        double value2=qunatityMeasurment.getFeet(1.0);
+        Assert.assertNotEquals(value1,value2,0.0);
+    }
+
+    @Test
+    public void givenTwoEqualFeetValue_WhenEqual_ThenShouldReturnTrue()
+    {
+        double value1=qunatityMeasurment.getFeet(1.0);
+        double value2=qunatityMeasurment.getFeet(1.0);
+        Assert.assertEquals(value1,value2,0.0);
+    }
+
 
 
 }
