@@ -5,7 +5,7 @@ import java.util.Objects;
 public class QunatityMeasurment
 {
     private double feet;
-    
+
     public double getFeet(double feet)
     {
         return feet;
@@ -18,6 +18,4 @@ public class QunatityMeasurment
         QunatityMeasurment that = (QunatityMeasurment) o;
         return Double.compare(that.feet, feet) == 0;
     }
-
-
 }

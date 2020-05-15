@@ -20,5 +20,11 @@ public class QuantityMeasurmentTest
         double value2=qunatityMeasurment.getFeet(0.0);
         Assert.assertEquals(value1,value2,0.0);
     }
+    
+    @Test
+    public void givenFeetValue_WhenNull_ThenShouldReturnFalse()
+    {
+       Assert.assertFalse(qunatityMeasurment.equals(null));
+    }
 
 }
