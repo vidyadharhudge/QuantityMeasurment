@@ -65,5 +65,13 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(value1,value2,0.0);
     }
 
+    @Test
+    public void givenInchValue_WhenNull_ThenShouldReturnFalse()
+    {
+        Assert.assertFalse(qunatityMeasurment.equals(null));
+    }
+
+
+
 
 }
