@@ -1,10 +1,23 @@
 package com.bl.quantitymeasurment;
 
+import java.util.Objects;
+
 public class QunatityMeasurment
 {
-    public static void main(String[] args)
+    private double feet;
+    
+    public double getFeet(double feet)
     {
-        System.out.println("Welcome To Quantity Measurment Program");
-
+        return feet;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        QunatityMeasurment that = (QunatityMeasurment) o;
+        return Double.compare(that.feet, feet) == 0;
+    }
+
+
 }
