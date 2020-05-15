@@ -34,5 +34,12 @@ public class QuantityMeasurmentTest
        Assert.assertEquals(qunatityMeasurment,qunatityMeasurment1);
     }
 
+    @Test
+    public void givenRefrenceObject_WhenEqual_ThenShouldReturnTrues()
+    {
+        Object obj=new Object();
+        Assert.assertFalse(qunatityMeasurment.equals(obj));
+    }
+
 
 }
