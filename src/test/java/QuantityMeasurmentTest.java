@@ -151,11 +151,18 @@ public class QuantityMeasurmentTest
     @Test
     public void givenOneInchAndOneYardValue_WhenNotEqual_ThenShouldReturnTrue()
     {
-        double feetValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
+        double inchValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
         double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
-        Assert.assertNotEquals(yardValue,feetValue,0.0);
+        Assert.assertNotEquals(inchValue,yardValue,0.0);
     }
 
+    @Test
+    public void givenOneYardAndThirtySixInchValue_WhenEqual_ThenShouldReturnTrue()
+    {
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        double inchValue=qunatityMeasurment.unitConversion(Units.INCH,36.0);
+        Assert.assertNotEquals(yardValue,inchValue,0.0);
+    }
 
 
 }
