@@ -164,5 +164,13 @@ public class QuantityMeasurmentTest
         Assert.assertNotEquals(yardValue,inchValue,0.0);
     }
 
+    @Test
+    public void givenThirtySixInchAndOneYardValue_WhenEqual_ThenShouldReturnTrue()
+    {
+        double yardValue=qunatityMeasurment.unitConversion(Units.INCH,36.0);
+        double inchValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        Assert.assertNotEquals(yardValue,inchValue,0.0);
+    }
+
 
 }
