@@ -141,6 +141,13 @@ public class QuantityMeasurmentTest
         double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
         Assert.assertEquals(yardValue,feetValue,0.0);
     }
+    @Test
+    public void givenOneFeetAndOneYardValue_WhenNotEqual_ThenShouldReturnTrue()
+    {
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        Assert.assertNotEquals(yardValue,feetValue,0.0);
+    }
 
 
 }
