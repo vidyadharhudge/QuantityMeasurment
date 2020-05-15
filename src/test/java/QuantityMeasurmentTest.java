@@ -28,7 +28,7 @@ public class QuantityMeasurmentTest
     }
 
     @Test
-    public void givenRefrenceObject_WhenEqual_ThenShouldReturnTrue()
+    public void givenRefrenceObjectForFeet_WhenEqual_ThenShouldReturnTrue()
     {
        QunatityMeasurment qunatityMeasurment1=new QunatityMeasurment();
        Assert.assertEquals(qunatityMeasurment,qunatityMeasurment1);
@@ -70,6 +70,14 @@ public class QuantityMeasurmentTest
     {
         Assert.assertFalse(qunatityMeasurment.equals(null));
     }
+
+    @Test
+    public void givenRefrenceObjectForInch_WhenEqual_ThenShouldReturnTrue()
+    {
+        QunatityMeasurment qunatityMeasurment1=new QunatityMeasurment();
+        Assert.assertEquals(qunatityMeasurment,qunatityMeasurment1);
+    }
+
 
 
 
