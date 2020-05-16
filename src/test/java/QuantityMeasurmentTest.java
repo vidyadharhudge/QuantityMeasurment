@@ -198,5 +198,12 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(4,inchValue1+inchValue2,0.0);
     }
 
+    @Test
+    public void givenOneFeetAndTwoInch_WhenAdded_ThenShouldReturnFourteenInch()
+    {
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double inchValue=qunatityMeasurment.unitConversion(Units.INCH,2.0);
+        Assert.assertEquals(14,feetValue+inchValue,0.0);
+    }
 
 }
