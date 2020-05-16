@@ -141,6 +141,7 @@ public class QuantityMeasurmentTest
         double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
         Assert.assertEquals(yardValue,feetValue,0.0);
     }
+
     @Test
     public void givenOneFeetAndOneYardValue_WhenNotEqual_ThenShouldReturnTrue()
     {
@@ -148,6 +149,7 @@ public class QuantityMeasurmentTest
         double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
         Assert.assertNotEquals(yardValue,feetValue,0.0);
     }
+
     @Test
     public void givenOneInchAndOneYardValue_WhenNotEqual_ThenShouldReturnTrue()
     {
@@ -179,4 +181,12 @@ public class QuantityMeasurmentTest
         double feetValue=qunatityMeasurment.unitConversion(Units.FEET,3.0);
         Assert.assertEquals(yardValue,feetValue,0.0);
     }
+    @Test
+    public void givenTwoInchAndFiveCm_WhenEqual_ThenShouldReturnTrue()
+    {
+        double inchValue=qunatityMeasurment.unitConversion(Units.INCH,2.0);
+        double cmValue=qunatityMeasurment.unitConversion(Units.CM_TO_INCH,5.0);
+        Assert.assertEquals(inchValue,cmValue,0.0);
+    }
+
 }
