@@ -237,13 +237,23 @@ public class QuantityMeasurmentTest
         double millititreValue=qunatityMeasurment.unitConversion(Units.MILLILITER_TO_LITRE,1000);
         Assert.assertEquals(litreValue,millititreValue,0.0);
     }
+
     @Test
-    public void givenOneGallonAndThreePointSevenEightLi_WhenEqual_ThenShouldReturnSevenPointFiveSevenLit()
+    public void givenOneGallonAndThreePointSevenEightLi_WhenAdded_ThenShouldReturnSevenPointFiveSevenLit()
     {
         double gallonValue=qunatityMeasurment.unitConversion(Units.GALLON_TO_LITRE,1.0);
         double litreValue=qunatityMeasurment.unitConversion(Units.LITRE,3.78);
         Assert.assertEquals(7.56,gallonValue+litreValue,0.0);
     }
+
+    @Test
+    public void givenOneLitAndOneThousandMilli_WhenAdded_ThenShouldReturnTwoLit()
+    {
+        double litreValue=qunatityMeasurment.unitConversion(Units.LITRE,1.0);
+        double milliliterValue=qunatityMeasurment.unitConversion(Units.MILLILITER_TO_LITRE,1000);
+        Assert.assertEquals(2,litreValue+milliliterValue,0.0);
+    }
+
 
 
 }
