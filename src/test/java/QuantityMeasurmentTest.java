@@ -270,6 +270,14 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(TonneValue,kilogramValue,0.0);
     }
 
+    @Test
+    public void givenOneTonneAndOneThousandGrams_WhenAdded_ThenShouldReturnOneThousandOneKg()
+    {
+        double TonneValue=qunatityMeasurment.unitConversion(Units.TONNE_TO_KG,1.0);
+        double gramValue=qunatityMeasurment.unitConversion(Units.GRAMS_TO_KG,1000);
+        Assert.assertEquals(1001,TonneValue+gramValue,0.0);
+    }
+
 
 
 
