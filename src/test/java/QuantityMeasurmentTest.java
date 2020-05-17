@@ -214,13 +214,21 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(24,feetValue1+feetValue2,0.0);
     }
 
-
     @Test
     public void givenTwoInchAndTwoPointFiveCm_WhenAdded_ThenShouldReturnThreeInch()
     {
         double inchValue1=qunatityMeasurment.unitConversion(Units.INCH,2.0);
-        double feetValue2=qunatityMeasurment.unitConversion(Units.CM_TO_INCH,2.5);
-        Assert.assertEquals(3,inchValue1+feetValue2,0.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.CM_TO_INCH,2.5);
+        Assert.assertEquals(3,inchValue1+feetValue,0.0);
     }
+
+    @Test
+    public void givenOneGallonAndThreePointSevenEightLit_WhenEual_ThenShouldReturnTrue()
+    {
+        double gallonValue=qunatityMeasurment.unitConversion(Units.GALLON_TO_LITRE,1.0);
+        double litreValue=qunatityMeasurment.unitConversion(Units.LITRE,3.78);
+        Assert.assertEquals(gallonValue,litreValue,0.0);
+    }
+
 
 }
