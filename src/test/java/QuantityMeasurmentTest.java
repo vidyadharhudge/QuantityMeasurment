@@ -17,8 +17,8 @@ public class QuantityMeasurmentTest
     @Test
     public void givenZeroFeetAndZeroFeetValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.unitConversion(Units.FEET,0.0);
-        double value2=qunatityMeasurment.unitConversion(Units.FEET,0.0);
+        double value1=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,0.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
@@ -45,16 +45,16 @@ public class QuantityMeasurmentTest
     @Test
     public void givenTwoDiffrentFeetValue_WhenEqual_ThenShouldReturnFalse()
     {
-        double value1=qunatityMeasurment.unitConversion(Units.FEET,0.0);
-        double value2=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,0.0);
+        double value2=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         Assert.assertNotEquals(value1,value2,0.0);
     }
 
     @Test
     public void givenTwoEqualFeetValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double value1=qunatityMeasurment.unitConversion(Units.FEET,1.0);
-        double value2=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double value1=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
+        double value2=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         Assert.assertEquals(value1,value2,0.0);
     }
 
@@ -105,7 +105,7 @@ public class QuantityMeasurmentTest
     @Test
     public void givenOneFeetAndOneInchValue_WhenNotEqual_ThenShouldReturnTrue()
     {
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
         Assert.assertNotEquals(feetValue,inchValue,0.0);
     }
@@ -114,14 +114,14 @@ public class QuantityMeasurmentTest
     public void givenOneInchAndOneFeetValue_WhenNotEqual_ThenShouldReturnTrue()
     {
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         Assert.assertNotEquals(inchValue,feetValue,0.0);
     }
 
     @Test
     public void givenOneFeetAndTweleveInchValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,12.0);
         Assert.assertEquals(feetValue,inchValue,0.0);
     }
@@ -130,23 +130,23 @@ public class QuantityMeasurmentTest
     public void givenTweleveInchAndOneFeetValue_WhenEqual_ThenShouldReturnTrue()
     {
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,12.0);
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         Assert.assertEquals(inchValue,feetValue,0.0);
     }
 
     @Test
     public void givenThreeFeetAndOneYardValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,3.0);
-        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,3.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
         Assert.assertEquals(yardValue,feetValue,0.0);
     }
 
     @Test
     public void givenOneFeetAndOneYardValue_WhenNotEqual_ThenShouldReturnTrue()
     {
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
-        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
         Assert.assertNotEquals(yardValue,feetValue,0.0);
     }
 
@@ -154,14 +154,14 @@ public class QuantityMeasurmentTest
     public void givenOneInchAndOneYardValue_WhenNotEqual_ThenShouldReturnTrue()
     {
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,1.0);
-        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
         Assert.assertNotEquals(inchValue,yardValue,0.0);
     }
 
     @Test
     public void givenOneYardAndThirtySixInchValue_WhenEqual_ThenShouldReturnTrue()
     {
-        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,36.0);
         Assert.assertEquals(yardValue,inchValue,0.0);
     }
@@ -170,15 +170,15 @@ public class QuantityMeasurmentTest
     public void givenThirtySixInchAndOneYardValue_WhenEqual_ThenShouldReturnTrue()
     {
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,36.0);
-        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
         Assert.assertEquals(inchValue,yardValue,0.0);
     }
 
     @Test
     public void givenOneYardAndThreeFeet_WhenEqual_ThenShouldReturnTrue()
     {
-        double yardValue=qunatityMeasurment.unitConversion(Units.YARD,1.0);
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,3.0);
+        double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,3.0);
         Assert.assertEquals(yardValue,feetValue,0.0);
     }
 
@@ -201,7 +201,7 @@ public class QuantityMeasurmentTest
     @Test
     public void givenOneFeetAndTwoInch_WhenAdded_ThenShouldReturnFourteenInch()
     {
-        double feetValue=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         double inchValue=qunatityMeasurment.unitConversion(Units.INCH,2.0);
         Assert.assertEquals(14,feetValue+inchValue,0.0);
     }
@@ -209,8 +209,8 @@ public class QuantityMeasurmentTest
     @Test
     public void givenOneFeetAndOneFeet_WhenAdded_ThenShouldReturnTwentyFourInch()
     {
-        double feetValue1=qunatityMeasurment.unitConversion(Units.FEET,1.0);
-        double feetValue2=qunatityMeasurment.unitConversion(Units.FEET,1.0);
+        double feetValue1=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
+        double feetValue2=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         Assert.assertEquals(24,feetValue1+feetValue2,0.0);
     }
 
@@ -223,12 +223,18 @@ public class QuantityMeasurmentTest
     }
 
     @Test
-    public void givenOneGallonAndThreePointSevenEightLit_WhenEual_ThenShouldReturnTrue()
+    public void givenOneGallonAndThreePointSevenEightLit_WhenEqual_ThenShouldReturnTrue()
     {
         double gallonValue=qunatityMeasurment.unitConversion(Units.GALLON_TO_LITRE,1.0);
         double litreValue=qunatityMeasurment.unitConversion(Units.LITRE,3.78);
         Assert.assertEquals(gallonValue,litreValue,0.0);
     }
 
-
+    @Test
+    public void givenOneLitAndOneThousandMilli_WhenEqual_ThenShouldReturnTrue()
+    {
+        double litreValue=qunatityMeasurment.unitConversion(Units.LITRE,1.0);
+        double millititreValue=qunatityMeasurment.unitConversion(Units.MILLILITER_TO_LITRE,1000);
+        Assert.assertEquals(litreValue,millititreValue,0.0);
+    }
 }
