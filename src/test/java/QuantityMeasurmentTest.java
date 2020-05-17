@@ -254,6 +254,14 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(2,litreValue+milliliterValue,0.0);
     }
 
+    @Test
+    public void givenOneKgAndOneThousandGrams_WhenEqual_ThenShouldReturnTrue()
+    {
+        double kilogramValue=qunatityMeasurment.unitConversion(Units.KG,1.0);
+        double gramsValue=qunatityMeasurment.unitConversion(Units.GRAMS_TO_KG,1000);
+        Assert.assertEquals(kilogramValue,gramsValue,0.0);
+    }
+
 
 
 }
