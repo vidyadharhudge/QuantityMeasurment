@@ -262,6 +262,15 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(kilogramValue,gramsValue,0.0);
     }
 
+    @Test
+    public void givenOneTonneAndOneThousandKgs_WhenEqual_ThenShouldReturnTrue()
+    {
+        double TonneValue=qunatityMeasurment.unitConversion(Units.TONNE_TO_KG,1.0);
+        double kilogramValue=qunatityMeasurment.unitConversion(Units.KG,1000);
+        Assert.assertEquals(TonneValue,kilogramValue,0.0);
+    }
+
+
 
 
 }
