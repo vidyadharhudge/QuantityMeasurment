@@ -278,6 +278,13 @@ public class QuantityMeasurmentTest
         Assert.assertEquals(1001,TonneValue+gramValue,0.0);
     }
 
+    @Test
+    public void givenTwoHundredTwleveFahrenheitAndHundredCel_WhenEual_ThenShouldReturnHundredDegCel()
+    {
+        double fahrenheitValue=qunatityMeasurment.unitConversion(Units.FAHRENHEIT_TO_CELSIUS,212);
+        double celciusValue=qunatityMeasurment.unitConversion(Units.CELSIUS,100);
+        Assert.assertEquals(fahrenheitValue,celciusValue,0.0);
+    }
 
 
 
