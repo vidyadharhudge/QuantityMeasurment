@@ -139,7 +139,7 @@ public class QuantityMeasurmentTest
     {
         double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,3.0);
         double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
-        Assert.assertEquals(yardValue,feetValue,0.0);
+        Assert.assertEquals(feetValue,yardValue,0.0);
     }
 
     @Test
@@ -147,7 +147,7 @@ public class QuantityMeasurmentTest
     {
         double feetValue=qunatityMeasurment.unitConversion(Units.FEET_TO_INCH,1.0);
         double yardValue=qunatityMeasurment.unitConversion(Units.YARD_TO_INCH,1.0);
-        Assert.assertNotEquals(yardValue,feetValue,0.0);
+        Assert.assertNotEquals(feetValue,yardValue,0.0);
     }
 
     @Test
@@ -285,7 +285,4 @@ public class QuantityMeasurmentTest
         double celciusValue=qunatityMeasurment.unitConversion(Units.CELSIUS,100);
         Assert.assertEquals(fahrenheitValue,celciusValue,0.0);
     }
-
-
-
 }
