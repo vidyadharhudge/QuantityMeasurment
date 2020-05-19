@@ -16,7 +16,7 @@ public enum Units
     //Enum For Conversion According To Weight
     KG(1.0),GRAMS_TO_KG(1.0/1000),TONNE_TO_KG(1.0*1000),
 
-    //Enum For Conversion According To Temprature
+    //Enum For Conversion According To Temperature
     CELSIUS(1.0*2.12),FAHRENHEIT_TO_CELSIUS(1.0);
 
     final Double unit;
@@ -29,5 +29,4 @@ public enum Units
     {
         this.unit = unit;
     }
-
 }

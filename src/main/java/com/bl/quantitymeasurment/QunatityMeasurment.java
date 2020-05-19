@@ -5,17 +5,23 @@
  * *********************************************************************************************************/
 
 package com.bl.quantitymeasurment;
-public class QunatityMeasurment
-{
+
+import com.bl.quantitymeasurment.exception.QuantityMeasurmentException;
+
+public class QunatityMeasurment {
+
     /*
     * @purpose:-Calculating Conversion
     * @param units:-Taking The Unit In Which Value To Be Convertd
     * @param value:-Taking The Value Which We Need To Convert
     * @return:-Converted Value
     */
-    public double unitConversion(Units units, double value)
-    {
-        return value*units.unit;
+    public double unitConversion(Units units, double value) {
+        if (value < 0) {
+               throw new QuantityMeasurmentException(QuantityMeasurmentException.ExceptionType.ENTER_VALID_INPUT, "Value Should Be poistive");
+        }else {
+            return value * units.unit;
+        }
     }
 
     /*
@@ -24,8 +30,7 @@ public class QunatityMeasurment
     * @return:-Return The Result Its True Or False(obj)
     */
     @Override
-    public boolean equals(Object obj)
-    {
+    public boolean equals(Object obj) {
         if (obj==null) return false;
         if (this==obj)return true;
         if (this.getClass()==obj.getClass())return true;
