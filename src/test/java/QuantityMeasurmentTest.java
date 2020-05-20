@@ -1,5 +1,5 @@
 import com.bl.quantitymeasurment.QunatityMeasurment;
-import com.bl.quantitymeasurment.Units;
+import com.bl.quantitymeasurment.enums.Units;
 import com.bl.quantitymeasurment.exception.QuantityMeasurmentException;
 import org.junit.Assert;
 import org.junit.Before;

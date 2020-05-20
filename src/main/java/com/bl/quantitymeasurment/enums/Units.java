@@ -3,9 +3,8 @@
  * @Author;-vidyadhar
  * @Date:-16/05/2020
  * *********************************************************************************************************/
-
-package com.bl.quantitymeasurment;
-public enum Units
+package com.bl.quantitymeasurment.enums;
+public enum  Units
 {
     //Enum For Conversion According To Length
     INCH(1.0),FEET_TO_INCH(1*12.0),YARD_TO_INCH(1*36.0),CM_TO_INCH(1/2.5),
@@ -19,14 +18,13 @@ public enum Units
     //Enum For Conversion According To Temperature
     CELSIUS(1.0*2.12),FAHRENHEIT_TO_CELSIUS(1.0);
 
-    final Double unit;
+    public final Double unit;
 
     /*
     * @purpose:-Store The Conversion Value
     * @param unit:-Taking Value As Parameter For Specific Unit (unit)
     */
-    Units(Double unit)
-    {
+    Units(Double unit) {
         this.unit = unit;
     }
 }
